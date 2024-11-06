@@ -4,7 +4,7 @@
     <div class="flex gap-3 justify-between">
       <h3 class="text-xl font-semibold">
         ✅ Projeto 1
-        <span class="text-xs text-gray-400">Finalizado em 2024</span>
+        <span class="text-xs text-gray-400">Finalizado em 2024 <?= date('Y') ?></span>
       </h3>
       <div class="font-semibold flex gap-3 text-xs">
         <span class="bg-indigo-500 text-indigo-900 rounded-md px-2 py-2">Php</span>
