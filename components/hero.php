@@ -1,3 +1,14 @@
+<?php
+
+$itens = [
+  ['href' => '/', 'alt' => 'twitter logo', 'src' => '/img/x-logo.svg'],
+  ['href' => '/', 'alt' => 'facebook logo', 'src' => '/img/facebook-logo.svg'],
+  ['href' => '/', 'alt' => 'instagram logo', 'src' => '/img/instagram-logo.svg'],
+];
+
+?>
+
+
 <section class="flex gap-x-6">
   <!-- titulo e descriçao -->
   <div class="w-2/3">
@@ -9,13 +20,16 @@
 
     <p>
     <ul class="flex gap-x-6 mt-6">
-      <li><a href="/" target="_blank" rel="noopener noreferrer"><img src="/img/x-logo.svg"
-            class="w-6 fill-blue-500 hover:animate-bounce" alt="x"></a>
-      </li>
-      <li><a href="/" target="_blank" rel="noopener noreferrer"><img src="/img/facebook-logo.svg"
-            class="w-6 fill-blue-500 hover:animate-bounce" alt="facebook"></a></li>
-      <li><a href="/" target="_blank" rel="noopener noreferrer"><img src="/img/instagram-logo.svg"
-            class="w-6 fill-blue-500 hover:animate-bounce" alt="instagram"></a></li>
+      <?php foreach ($itens as $item): ?>
+        <li class="hover:text-gray-400">
+          <a href="<?= $item['href'] ?>" target="_blank"">
+          <img src=" <?= $item['src'] ?>"
+            class="w-6 fill-blue-500 hover:animate-bounce" alt="<?= $item['alt'] ?>">
+          </a>
+        </li>
+
+      <?php endforeach; ?>
+
 
     </ul>
     </p>
